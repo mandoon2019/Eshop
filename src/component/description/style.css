@@ -1,0 +1,13 @@
+.Description {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.money {
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-top-color: #CCCCCC;
+    border-bottom-color: #CCCCCC;
+    padding: 5px 0px;
+}
+

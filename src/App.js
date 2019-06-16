@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { Provider } from 'react-redux'
+import store from './store'
 
-function App() {
+import Header from './component/header'
+import Description from './component/description'
+import SizeBox from './component/sizebox'
+import ImageBox from './component/imagebox'
+import CartToast from './component/carttoast'
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <CartToast />
+        <div className="sectionWrap">
+          <ImageBox />
+          <div className="rightSide">
+            <Description />
+            <SizeBox />
+          </div>
+        </div>
+      </div>
+    </Provider>
+  )
 }
-
-export default App;
+export default App
